@@ -7,7 +7,7 @@ import '../index.css';
 import './App.css';
 import Scroll from '../components/Scroll';
 
-import { setSearchField, requestRobots } from '../actions'
+import { setSearchField, requestRobots } from '../actions';
 
 const mapStateToProps = state => {
   return {
@@ -36,7 +36,7 @@ class App extends Component {
    render(){
      const { searchField, onSearchChange, robots, isPending } = this.props;
    	 const filteredRobots = robots.filter(robot => {
-  		return robot.name.toLowerCase().includes(searchField.toLowerCase())})
+  		return robot.name.toLowerCase().includes(searchField.toLowerCase())});
    	 return isPending ?
    	 	       <h1> Loading </h1> :
 		       (  
